@@ -172,7 +172,8 @@
     "string-argv": "^0.3.0",
     "title-case": "^2.1.1",
     "util-arity": "^1.0.2",
-    "verror": "^1.9.0"
+    "verror": "^1.9.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -221,10 +222,11 @@
     "lint-dependencies": "dependency-lint",
     "lint": "yarn run lint-code && yarn run lint-dependencies",
     "prefeature-test": "yarn run build-local",
-    "prepublish": "yarn run build-local",
+    "prepublish": "yarn run snyk-protect && yarn run build-local",
     "test-coverage": "yarn run lint && ./scripts/test-coverage.sh",
     "test": "yarn run lint && yarn run unit-test && yarn run feature-test",
-    "unit-test": "mocha src"
+    "unit-test": "mocha src",
+    "snyk-protect": "snyk protect"
   },
   "bin": {
     "cucumber-js": "./bin/cucumber-js"
@@ -234,5 +236,6 @@
     "bin/",
     "dist/",
     "lib/"
-  ]
+  ],
+  "snyk": true
 }
