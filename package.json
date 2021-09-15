@@ -148,7 +148,7 @@
   "dependencies": {
     "assertion-error-formatter": "^3.0.0",
     "bluebird": "^3.4.1",
-    "cli-table3": "^0.5.1",
+    "cli-table3": "^0.6.0",
     "colors": "^1.1.2",
     "commander": "^3.0.1",
     "cucumber-expressions": "^7.0.0",
